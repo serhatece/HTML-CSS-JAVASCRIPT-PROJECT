@@ -1,4 +1,1 @@
-# HTML-CSS-JAVASCRIPT-PROJECT
-
-
-# THIS IS MY HTML-CSS-JAVASCRIPT-PROJECT 
+This repo is the projects I made to learn html-css-javascript.
