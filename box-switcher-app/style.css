@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', serif;
+    background-color:gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #eeeeee2a;
+    border-radius: 1rem;
+    padding: 3rem 5rem;
+    color: #fff;
+    margin: 20px auto;
+    max-width: 35rem;
+    position: relative;
+}
+
+.fa-quote {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 70px;
+}
+
+.fa-quote-right {
+    color: black;
+    left: 40px;
+}
+
+
+.fa-quote-left {
+    color: black;
+    right: 40px;
+}
+
+.user-text {
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+}
+
+.user-datais {
+    margin-left: 1rem;
+}
+
+.user .username {
+    margin: 0;
+}
+
+.user .job {
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #fff;
+    width: 100%;
+    animation: grow 10s linear infinite;
+    transform-origin: left;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+}
+
+@media (max-width: 35rem) {
+    .fa-quote {
+        display: none;
+    }
+
+    .container {
+        padding: 2rem 3rem;
+    }
+}
