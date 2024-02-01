@@ -1,0 +1,15 @@
+body {
+    background-image: url(img/photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.canvas-container {
+    text-align: center;
+}
