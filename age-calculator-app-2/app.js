@@ -46,7 +46,7 @@ function ageCalculate() {
         birthMonth--;
         let days;
         if (currentMonth - 2 < 0) {
-            days = months[11]; // Aralık ayını al
+            days = months[11];
         } else {
             days = months[currentMonth - 2];
         }
