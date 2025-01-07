@@ -7,18 +7,16 @@ let startBtn = document.getElementById("btn-start");
 let pauseBtn = document.getElementById("btn-pause");
 let time = document.getElementById("time");
 
-let set; // Timer ID
+let set;
 let count = 59;
-let paused = true; // Timer'ın durumu
-let mincount = 24; // Dakika sayısı
+let paused = true;
+let mincount = 24;
 time.textContent = `${mincount + 1}:00`;
 
-// Dakika ve saniyeleri sıfırla doldurmak için yardımcı fonksiyon
 const appendZero = (value) => {
   return value < 10 ? `0${value}` : value;
 };
 
-// Timer'ı sıfırlama fonksiyonu
 const resetTimer = () => {
   pauseTimer();
   mincount = 24;
@@ -26,7 +24,6 @@ const resetTimer = () => {
   time.textContent = `${mincount + 1}:00`;
 };
 
-// Timer'ı durdurma fonksiyonu
 const pauseTimer = () => {
   clearInterval(set);
   paused = true;
@@ -35,7 +32,6 @@ const pauseTimer = () => {
   resetBtn.classList.remove("show");
 };
 
-// Timer'ı başlatma fonksiyonu
 const startTimer = () => {
   resetBtn.classList.add("show");
   pauseBtn.classList.remove("show");
@@ -51,21 +47,19 @@ const startTimer = () => {
           mincount--;
           count = 60;
         } else {
-          clearInterval(set); // Timer bitince durdur
+          clearInterval(set);
         }
       }
     }, 1000);
   }
 };
 
-// Aktif butonun vurgusunu kaldır
 const removeFocus = () => {
   buttons.forEach((btn) => {
     btn.classList.remove("active");
   });
 };
 
-// Odaklanma butonu
 focusButton.addEventListener("click", () => {
   removeFocus();
   focusButton.classList.add("btn-focus");
@@ -75,7 +69,6 @@ focusButton.addEventListener("click", () => {
   time.textContent = `${mincount + 1}:00`;
 });
 
-// Kısa mola butonu
 shortBreakButton.addEventListener("click", () => {
   removeFocus();
   shortBreakButton.classList.add("btn-focus");
@@ -85,7 +78,6 @@ shortBreakButton.addEventListener("click", () => {
   time.textContent = `${appendZero(mincount + 1)}:00`;
 });
 
-// Uzun mola butonu
 longBreakButton.addEventListener("click", () => {
   removeFocus();
   longBreakButton.classList.add("btn-focus");
@@ -95,11 +87,8 @@ longBreakButton.addEventListener("click", () => {
   time.textContent = `${mincount + 1}:00`;
 });
 
-// Başlat butonu
 startBtn.addEventListener("click", startTimer);
 
-// Durdur butonu
 pauseBtn.addEventListener("click", pauseTimer);
 
-// Sıfırla butonu
 resetBtn.addEventListener("click", resetTimer);
